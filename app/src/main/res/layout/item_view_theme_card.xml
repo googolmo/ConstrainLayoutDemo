@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:minHeight="96dp"
+    apps:cardCornerRadius="2dp"
+    apps:cardElevation="2dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            apps:layout_constraintLeft_toLeftOf="parent"
+            apps:layout_constraintRight_toRightOf="parent"
+            apps:layout_constraintTop_toTopOf="parent"
+            apps:layout_constraintDimensionRatio="H,4:3"
+            apps:srcCompat="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            apps:layout_constraintLeft_toLeftOf="parent"
+            apps:layout_constraintRight_toRightOf="parent"
+            apps:layout_constraintHorizontal_bias="0.3"
+            apps:layout_constraintTop_toBottomOf="@id/imageView2"
+            android:text="这是一行测试文本"
+            android:background="#ABABAB"
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:minHeight="48dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            apps:layout_constraintHorizontal_chainStyle="spread"
+            apps:layout_constraintBottom_toBottomOf="parent"
+            apps:layout_constraintLeft_toLeftOf="parent"
+            apps:layout_constraintTop_toBottomOf="@+id/text1"
+            apps:layout_constraintRight_toLeftOf="@+id/imageView3"
+            apps:layout_constraintHorizontal_weight="5"
+            android:background="#ABABAB"
+            tools:text="TextView" />
+        <!--apps:layout_constraintRight_toLeftOf="@+id/imageView3"-->
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#CCCCCC"
+            android:minHeight="48dp"
+            apps:layout_constraintBottom_toBottomOf="parent"
+            apps:layout_constraintRight_toRightOf="parent"
+            apps:layout_constraintLeft_toRightOf="@id/title"
+            apps:layout_constraintHorizontal_weight="1"
+            apps:srcCompat="@drawable/ic_menu_share" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
